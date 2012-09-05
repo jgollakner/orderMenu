@@ -9,17 +9,18 @@ and open the template in the editor.
         <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
     </head>
     <body>
-                <h1 align="center">Please Select from our menu!</h1>
-        <form>
-            <input type="checkbox" name="menuItem" value="Steak" /> Steak<br />
-            <input type="checkbox" name="menuItem" value="Chicken" /> Chicken<br />
-            <input type="checkbox" name="menuItem" value="Pork" /> Pork<br />
-            <input type="checkbox" name="menuItem" value="Wine" /> Wine<br />
-            <input type="checkbox" name="menuItem" value="Whiskey" /> Whiskey<br />
-            <input type="checkbox" name="menuItem" value="Soda" /> Soda<br />
-            <input type="checkbox" name="menuItem" value="Cake" /> Cake<br />
-            <input type="checkbox" name="menuitem" value="Pie" /> Pie <br />
-            <input id="itemSubmit" name="itemSubmit" type="submit" value="Get Order">
+        <h1 align="center">Please Select from our menu!</h1><br />
+
+        <form id="form1" name="form1" method="POST" action="SelectMenu.do">
+            <select id="menuItem" name="menuItem">
+                <option value="Steak">Steak</option>
+                <option value="Chicken">Chicken</option>
+                <option value="Alcohol">Alcohol</option>
+                <option value="Dessert">Dessert</option>
+            </select>
+            <center>
+                <input id="menuSubmit" name="menusubmit" type="submit" value="Get Order">
+            </center>
         </form>
     </body>
 </html>

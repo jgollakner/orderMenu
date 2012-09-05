@@ -16,16 +16,13 @@
     <body>
         <h1>Here is your order!  Thank you for your business!</h1><br />
         <p>
-           <%
-        List recs = (List)request.getAttribute("FinalOrder");
-        Iterator it = recs.iterator();
-        while(it.hasNext()) {
-            // Notice we're outputting some HTML. Is that a good idea?
-            // Also, notice we do not cast the object returned by the
-            // iterator to a String. Why?
-            out.print("<br>try: " + it.next());
-        }
-    %>
+            <%
+                List recs = (List) request.getAttribute("FinalOrder");
+                Iterator it = recs.iterator();
+                while (it.hasNext()) {
+                    out.print("<br>try: " + it.next());
+                }
+            %>
         </p>
         <p><a href="select.html">Back
     </body>

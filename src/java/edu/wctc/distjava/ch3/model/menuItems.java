@@ -8,33 +8,28 @@ import java.util.*;
  */
 public class menuItems {
 
-    public List getItems(String menuItem) {
-        List foods = new ArrayList();
+    public List getItems(String menuItems) {
+        List items = new ArrayList();
 
-        if (menuItem.equals("Steak")) {
-            foods.add("Steak");
+        if (menuItems.equals("Steak")) {
+            items.add("Porter House");
+            items.add("New York Strip");
 
-        } else if (menuItem.equals("Chicken")) {
-            foods.add("Chicken");
+        } else if (menuItems.equals("Chicken")) {
+            items.add("Chicken Marsala");
+            items.add("Chicken Fajitas");
 
-        } else if (menuItem.equals("Pork")) {
-            foods.add("Pork");
-
-        } else if (menuItem.equals("Wine")) {
-            foods.add("Wine");
-
-        } else if (menuItem.equals("Whiskey")) {
-            foods.add("Whiskey");
-
-        } else if (menuItem.equals("Soda")) {
-            foods.add("Soda");
-
-        } else if (menuItem.equals("Cake")) {
-            foods.add("Cake");
+        } else if (menuItems.equals("Alcohol")) {
+            items.add("Beer");
+            items.add("Whiskey");
+            items.add("Wine");
+            items.add("Gin");
 
         } else {
-            foods.add("Pie");
+            items.add("Chocolate Lava Cake");
+            items.add("Ice Cream");
         }
-        return foods;
+
+        return items;
     }
 }
