@@ -14,7 +14,7 @@
         <title>Final order</title>
     </head>
     <body>
-        <h1>Here is your order!  Thank you for your business!</h1><br />
+        <h1>Here are the items within your selection!</h1><br />
         <p>
             <%
                 List recs = (List) request.getAttribute("FinalOrder");
