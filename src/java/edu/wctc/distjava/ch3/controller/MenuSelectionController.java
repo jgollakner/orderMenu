@@ -4,8 +4,11 @@
  */
 package edu.wctc.distjava.ch3.controller;
 
+import edu.wctc.distjava.ch3.model.menuItems;
 import java.io.IOException;
 import java.io.PrintWriter;
+import java.util.List;
+import javax.servlet.RequestDispatcher;
 import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
@@ -80,8 +83,17 @@ public class MenuSelectionController extends HttpServlet {
             throws ServletException, IOException {
          response.setContentType("text/html");
          
-            String c = request.getParameter("color");
+            String m = request.getParameter("menuItem");
+            
+            menuItems mi = new menuItems();
+            
+            List result = mi.getItems(m.trim());
          
+            request.setAttribute("FinalOrder", result);
+            
+            RequestDispatcher view =
+                request.getRequestDispatcher(ORDER_PAGE);
+        view.forward(request, response);
          
     }
 
@@ -92,6 +104,6 @@ public class MenuSelectionController extends HttpServlet {
      */
     @Override
     public String getServletInfo() {
-        return "Short description";
+        return "Main controller";
     }// </editor-fold>
 }

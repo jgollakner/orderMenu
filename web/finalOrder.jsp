@@ -4,14 +4,29 @@
     Author     : JoeGollakner
 --%>
 
+<%@page import="java.util.Iterator"%>
+<%@page import="java.util.List"%>
 <%@page contentType="text/html" pageEncoding="UTF-8"%>
 <!DOCTYPE html>
 <html>
     <head>
         <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-        <title>JSP Page</title>
+        <title>Final order</title>
     </head>
     <body>
-        <h1>Hello World!</h1>
+        <h1>Here is your order!  Thank you for your business!</h1><br />
+        <p>
+           <%
+        List recs = (List)request.getAttribute("FinalOrder");
+        Iterator it = recs.iterator();
+        while(it.hasNext()) {
+            // Notice we're outputting some HTML. Is that a good idea?
+            // Also, notice we do not cast the object returned by the
+            // iterator to a String. Why?
+            out.print("<br>try: " + it.next());
+        }
+    %>
+        </p>
+        <p><a href="select.html">Back
     </body>
 </html>
